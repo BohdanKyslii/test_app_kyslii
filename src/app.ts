@@ -14,7 +14,50 @@ const products = [
 ];
 
 app.get('/', (req: Request, res: Response) => {
-	res.send('Hello World! Node');
+	res.send(`<style>
+			.box {
+				width: 260px;
+				height: 160px;
+				background-color: #4CAF50;
+				color: #ffffff;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				gap: 12px;
+				font-family: sans-serif;
+				text-align: center;
+				margin: 50px auto;
+				border-radius: 12px;
+			}
+			.buttons {
+				display: flex;
+				flex-direction: row;
+				gap: 12px;
+			}
+			.box button {
+				padding: 8px 16px;
+				border: none;
+				border-radius: 6px;
+				background-color: #ffffff;
+				color: #4CAF50;
+				font-weight: bold;
+				cursor: pointer;
+			}
+		</style>
+		<div class="box">
+			Перевір ендпоінти на проді
+			<div class="buttons">
+				<button onclick="window.open('/health', '_blank')">Health</button>
+				<button onclick="window.open('/products', '_blank')">Products</button>
+			</div>
+		</div>
+		<script>
+			window.onload = () => {
+				alert('Вітаємо на сторінці!');
+			};
+		</script>`
+	);
 });
 
 app.get('/health', (req: Request, res: Response) => {

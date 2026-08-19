@@ -7,6 +7,10 @@ const products = [
 	{ id: 2, name: 'Mouse', price: 700 },
 	{ id: 3, name: 'Monitor', price: 4500 },
 	{ id: 4, name: 'Headphones', price: 950 },
+	{ id: 5, name: 'USB cable', price: 400 },
+	{ id: 6, name: 'Printer', price: 18500 },
+	{ id: 7, name: 'Router', price: 2100 },
+	{ id: 8, name: 'Computer desk', price: 7500 },
 ];
 
 app.get('/', (req: Request, res: Response) => {
